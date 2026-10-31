@@ -183,7 +183,8 @@ Convenções usadas em cada sessão:
 | Solicitação | Tratar o Docker como validado (prints em `docs/evidencias`), profissionalizar este registro e publicar em `https://github.com/Rafaeldeoliveira87/Desafio-tecnico-areco.git`. |
 | Proposta da IA | Reescrever os MDs de processo; atualizar README/revisão final; criar repositório Git apenas nesta pasta (isolado do repositório da home) e enviar ao GitHub informado. |
 | Decisão | **Aceita.** |
-| Observação de ambiente | O diretório do desafio não possuía `.git` próprio. O Git detectado anteriormente pertencia a `C:\Users\rafag` (projeto Automanager) e não deve receber este código. |
+| Validação | Git próprio nesta pasta; push de `main` para o repositório informado (commit inicial `597f2b4`). Docker Desktop: container `desafiotecnico-agente-1` healthy. |
+| Observação de ambiente | O Git da home (`C:\Users\rafag`, remote Automanager) não recebeu este código. |
 
 ## Sugestões da IA por destino
 

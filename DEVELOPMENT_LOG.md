@@ -156,6 +156,6 @@ Ferramentas de IA: ver `docs/AI_INTERACTIONS.md`. Decisões de arquitetura: ver 
 
 **Arquivos.** `docs/AI_INTERACTIONS.md`, `DEVELOPMENT_LOG.md`, `README.md`, `FINAL_REVIEW.md`, `docs/LIMITATIONS.md`, `docs/TESTING.md`.
 
-**Método de validação.** Conferir evidências em `docs/evidencias/`; `docker ps` com status healthy; inicializar Git **somente** nesta pasta; enviar para `https://github.com/Rafaeldeoliveira87/Desafio-tecnico-areco.git`.
+**Validação.** `docker ps`: `desafiotecnico-agente-1` healthy em `0.0.0.0:8000`. Git inicializado nesta pasta (não na home). Commit `597f2b4` enviado para `origin/main`.
 
-**Risco evitado.** Não commitar o desafio no repositório Git da home (`C:\Users\rafag`, remote Automanager).
+**Risco evitado.** O desafio não foi commitado no repositório Git da home (`C:\Users\rafag`, remote Automanager).
