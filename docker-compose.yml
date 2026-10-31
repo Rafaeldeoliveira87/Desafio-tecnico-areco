@@ -1,0 +1,26 @@
+services:
+  agente:
+    build: .
+    ports:
+      - "${PORT:-8000}:8000"
+    environment:
+      APP_ENV: ${APP_ENV:-development}
+      CLASSIFICATION_CONFIDENCE_THRESHOLD: ${CLASSIFICATION_CONFIDENCE_THRESHOLD:-0.55}
+      ALLOWED_ORIGINS: ${ALLOWED_ORIGINS:-}
+      REINDEX_ENABLED: ${REINDEX_ENABLED:-true}
+      LLM_PROVIDER: ${LLM_PROVIDER:-none}
+      LLM_API_KEY: ${LLM_API_KEY:-}
+      LLM_MODEL: ${LLM_MODEL:-}
+      LLM_BASE_URL: ${LLM_BASE_URL:-https://api.openai.com/v1/chat/completions}
+      EXTERNAL_PROCESSING_ENABLED: ${EXTERNAL_PROCESSING_ENABLED:-false}
+      LLM_TIMEOUT_SECONDS: ${LLM_TIMEOUT_SECONDS:-12}
+      LLM_MAX_RETRIES: ${LLM_MAX_RETRIES:-1}
+    volumes:
+      - ./financeiro:/app/financeiro:ro
+      - ./informacoes_internas:/app/informacoes_internas:ro
+      - ./ouvidoria:/app/ouvidoria:ro
+      - logs_data:/app/logs
+    restart: unless-stopped
+
+volumes:
+  logs_data:

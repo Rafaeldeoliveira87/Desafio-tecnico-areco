@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Assistente Aurora</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div class="brand-mark" aria-hidden="true">A</div>
+      <div class="brand-copy">
+        <p class="eyebrow">ARECO · DESAFIO DE IA</p>
+        <h1>Assistente Aurora</h1>
+        <p class="subtitle">Uma porta de entrada para informações da empresa</p>
+      </div>
+      <div class="status-pill"><span class="status-dot" aria-hidden="true"></span> Demonstração</div>
+    </header>
+
+    <div class="notice" role="note">
+      <span aria-hidden="true">ⓘ</span>
+      <p>As bases desta demonstração contêm dados sintéticos. As respostas mostram as fontes consultadas.</p>
+    </div>
+
+    <section id="conversation" class="conversation" aria-label="Conversa com o assistente" aria-live="polite">
+      <article class="message assistant-message welcome-message">
+        <div class="avatar" aria-hidden="true">A</div>
+        <div class="message-body">
+          <span class="message-label">ASSISTENTE</span>
+          <p>Olá! Posso ajudar com consultas financeiras, políticas internas ou informações da Ouvidoria.</p>
+          <p class="welcome-hint">Escolha um exemplo ou escreva sua pergunta abaixo.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="composer-area" aria-label="Enviar pergunta">
+      <div class="examples" aria-label="Perguntas de exemplo">
+        <button type="button" class="example-chip">Como solicito férias?</button>
+        <button type="button" class="example-chip">Qual o status do protocolo OUV-0002?</button>
+        <button type="button" class="example-chip">Qual departamento tem maior orçamento em janeiro de 2026?</button>
+      </div>
+      <form id="chat-form">
+        <label class="sr-only" for="question">Digite sua pergunta</label>
+        <div class="input-wrap">
+          <textarea id="question" name="question" rows="2" maxlength="1500" placeholder="Digite sua pergunta…" required></textarea>
+          <button id="send-button" class="send-button" type="submit">
+            <span>Enviar</span><span aria-hidden="true">↗</span>
+          </button>
+        </div>
+        <div class="composer-footer">
+          <span>Até 1.500 caracteres · Não inclua senhas ou dados pessoais</span>
+          <span id="char-count" aria-hidden="true">0 / 1500</span>
+        </div>
+      </form>
+    </section>
+    <footer>Assistente experimental · Consulte as políticas oficiais em caso de dúvida</footer>
+  </main>
+  <script src="/static/app.js" defer></script>
+</body>
+</html>
